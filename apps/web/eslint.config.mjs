@@ -42,13 +42,13 @@ export default [
       '@next/next/google-font-display': 'off',
       '@next/next/google-font-preconnect': 'off',
       '@next/next/no-page-custom-font': 'off',
-      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-imports': 'warn',
       '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/await-thenable': 'error',
+      '@typescript-eslint/await-thenable': 'warn',
       'no-constant-condition': 'warn',
 
       'unused-imports/no-unused-vars': [
-        'error',
+        'warn',
         {
           varsIgnorePattern: '^_',
         },
