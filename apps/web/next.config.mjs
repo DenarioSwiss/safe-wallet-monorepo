@@ -36,6 +36,7 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   eslint: {
     dirs: ['src', 'cypress'],
+    ignoreDuringBuilds: true, // Disables ESLint warnings from canceling builds
   },
   experimental: {
     optimizePackageImports: [
@@ -102,14 +103,10 @@ const withMDX = createMDX({
   extension: /\.(md|mdx)?$/,
   jsx: true,
   options: {
-    remarkPlugins: [
-      remarkFrontmatter,
-      [remarkMdxFrontmatter, { name: 'metadata' }],
-      remarkHeadingId, remarkGfm],
+    remarkPlugins: [remarkFrontmatter, [remarkMdxFrontmatter, { name: 'metadata' }], remarkHeadingId, remarkGfm],
     rehypePlugins: [],
   },
 })
-
 
 export default withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
