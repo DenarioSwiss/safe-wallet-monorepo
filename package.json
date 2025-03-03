@@ -3,7 +3,7 @@
   "name": "@safe-global/safe-wallet",
   "version": "1.0.0",
   "workspaces": [
-    "apps/*",
+    "apps/web",
     "config/*",
     "packages/*"
   ],
